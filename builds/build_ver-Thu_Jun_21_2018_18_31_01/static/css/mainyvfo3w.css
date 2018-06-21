@@ -806,7 +806,7 @@ h1 {
   width: 80px;
   height: 80px;
   background-position: 0px 0px;
-  background-image: url("../img/png-sprite/96dpi/sprite71v5o8.png");
+  background-image: url("../img/png-sprite/96dpi/spriteyvfo3w.png");
   background-size: 226px 144px;
   background-repeat: no-repeat;
 }
@@ -814,7 +814,7 @@ h1 {
   width: 66px;
   height: 50px;
   background-position: -64px -84px;
-  background-image: url("../img/png-sprite/96dpi/sprite71v5o8.png");
+  background-image: url("../img/png-sprite/96dpi/spriteyvfo3w.png");
   background-size: 226px 144px;
   background-repeat: no-repeat;
 }
@@ -822,7 +822,7 @@ h1 {
   width: 32px;
   height: 30px;
   background-position: -176px -44px;
-  background-image: url("../img/png-sprite/96dpi/sprite71v5o8.png");
+  background-image: url("../img/png-sprite/96dpi/spriteyvfo3w.png");
   background-size: 226px 144px;
   background-repeat: no-repeat;
 }
@@ -871,7 +871,7 @@ h1 {
   width: 60px;
   height: 60px;
   background-position: 0px -84px;
-  background-image: url("../img/png-sprite/96dpi/sprite71v5o8.png");
+  background-image: url("../img/png-sprite/96dpi/spriteyvfo3w.png");
   background-size: 226px 144px;
   background-repeat: no-repeat;
 }
@@ -889,7 +889,7 @@ h1 {
     width: 24px;
     height: 23px;
     background-position: -134px -84px;
-    background-image: url("../img/png-sprite/96dpi/sprite71v5o8.png");
+    background-image: url("../img/png-sprite/96dpi/spriteyvfo3w.png");
     background-size: 226px 144px;
     background-repeat: no-repeat;
   }
@@ -2926,6 +2926,12 @@ h1 {
     padding-top: 15px;
   }
 }
+@media (max-width: 370px) {
+  .carts__good-inner-composition-items {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
 .filter__content {
   box-sizing: border-box;
   width: 235px;
@@ -3754,7 +3760,7 @@ h1 {
   width: 88px;
   height: 31px;
   background-position: -84px -44px;
-  background-image: url("../img/png-sprite/96dpi/sprite71v5o8.png");
+  background-image: url("../img/png-sprite/96dpi/spriteyvfo3w.png");
   background-size: 226px 144px;
   background-repeat: no-repeat;
 }
@@ -3787,7 +3793,7 @@ h1 {
   width: 142px;
   height: 40px;
   background-position: -84px 0px;
-  background-image: url("../img/png-sprite/96dpi/sprite71v5o8.png");
+  background-image: url("../img/png-sprite/96dpi/spriteyvfo3w.png");
   background-size: 226px 144px;
   background-repeat: no-repeat;
 }
