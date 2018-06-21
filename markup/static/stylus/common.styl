@@ -1,0 +1,54 @@
+// Common styles of the project
+
+html,
+body
+  height 100%
+
+.wrapper
+  display flex
+  flex-direction column
+  height 100%
+
+.content
+  flex 1 0 auto
+  &--basket
+    background-color #fbfbfb
+
+.page-footer
+  flex 0 0 auto
+  
+.container
+  max-width 1880px
+  margin 0 auto
+  padding 0 20px
+  
+img
+  width 100%
+  height auto
+  
+h1
+  reset()
+  
+  font-size 24px
+  line-height 29px
+  font-weight 600
+  color #ad5a55
+  
+@media(max-width 900px)
+  .container
+    &--media900-pl0
+      padding-left 0
+      
+@media(max-width 870px)
+  .container
+    &--media870-pr0
+      padding-right 0
+      
+@media(max-width 850px)
+  h1
+    font-size 20px
+    line-height 23px
+    
+@media(max-width 850px)
+  .container
+    padding 0

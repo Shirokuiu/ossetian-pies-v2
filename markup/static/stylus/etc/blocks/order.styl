@@ -1,0 +1,530 @@
+.order
+  padding-right 6%
+
+.order__basket
+  border 1px solid #dcdcdc
+  
+.order__basket-tr
+  border-bottom 1px solid #dcdcdc
+  &:last-child
+    border-bottom none
+  
+.order__basket-title-td
+  padding 15px 0
+  &--goods
+    width 35%
+  
+.order__basket__img-content
+  padding-left 40px
+  
+.order__basket-headline
+  font-size 16px
+  line-height 19px
+  color #000000
+  
+.order__basket-cart-td
+  padding 30px 0
+  &--last
+    position relative
+  
+.order__basket__img-wrap
+  width 100px
+  margin-right 14%
+  
+.order__basket-headline-good
+  width 200px
+  
+  font-size 16px
+  line-height 19px
+  color #000000
+  
+.order__basket-good-price
+  width 78px
+  
+  font-size 27px
+  line-height 32px
+  color #3d3c3b
+  text-align right
+  
+.order__basket-good-price-span
+  margin-left 5px
+  
+  font-size 21px
+  line-height 25px
+  color #3d3c3b
+  
+.order__basket-controls
+  width 90px
+  
+  background-color #f3f3f5
+  
+.order__basket-control
+  position relative
+  
+  height 35px
+  &::before,
+  &::after
+    center-absolute()
+    
+    content ''
+    
+    width 30%
+    height 2px
+    
+    background-color #555555
+  &::before
+    transform rotate(90deg)
+  &--inc
+    &::before
+      display none
+  
+.order__basket-control-number
+  font-size 16px
+  line-height 35px
+  color #555555
+  
+.order__basket-good-pieces
+  font-size 16px
+  line-height 19px
+  color #000000
+  
+.order__basket-cart-cancel
+  position absolute
+  top 5px
+  right 10px
+  
+  width 30px
+  height 30px
+  
+  transition 0.2s ease
+  
+  exit(70%, 1px, #707170)
+  &:hover
+    background-color #F3F3F5
+    
+.order__total-price
+  padding 5px 10px
+  
+  background-color #fdfaef
+    
+.order__total-price
+  margin-right 20px
+  
+  font-size 19px
+  line-height 23px
+  color #000000
+    
+.order__total-price-num,
+.order__total-price-span
+  font-size 27px
+  line-height 32px
+  color #3d3c3b
+  
+.order__total-price-span
+  margin-left 10px
+  
+  font-size 21px
+  line-height 25px
+
+.order__form
+  width 1045px
+  
+.order__form-content-wrap
+  padding 20px
+  padding-bottom 30px
+  
+  background-color #fdfaef
+  
+.order__form-content-user-icon
+  width 65px
+  margin-right 20px
+  margin-bottom 20px
+  
+.order__form-list
+  margin-bottom 30px
+  
+.order__form-items
+  margin-bottom 20px
+  &:last-child
+    margin-bottom 0
+  
+.order__form-item-label
+  margin-left 10px
+  margin-bottom 8px
+  
+  font-size 15px
+  line-height 18px
+  color #000000
+
+.order__form-item-input
+  padding 12px 12px
+  
+  font-size 19px
+  line-height 23px
+  color #000000
+  
+  background-color #ffffff
+  
+  border 1px solid #dcdcdc
+  border-radius 5px
+  &--textarea
+    height 95px
+    
+    resize none
+    
+.order__form-list-payment
+  margin-left 10px
+  margin-bottom 70px
+    
+.order__form-payment-items
+  margin-right 30px
+  &:last-child
+    margin-right 0
+  &--total-price
+    margin-left auto
+    
+.order__form-payment-headline
+  font-size 15px
+  line-height 18px
+  color #000000
+  
+.order__form-payment-input-radio
+  &:checked + .order__form-payment-label
+    .order__form-payment-label-indicator
+      border-color #da1b40
+      &::before
+        display block
+  
+.order__form-payment-label
+  position relative
+  
+  padding-left 35px
+  
+  font-size 15px
+  line-height 18px
+  color #000000
+  
+  cursor pointer
+  &:hover
+    .order__form-payment-label-indicator
+      border-color #da1b40
+
+.order__form-payment-label-indicator
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  
+  box-sizing border-box
+  display flex
+  justify-content center
+  align-items center
+  width 24px
+  height 24px
+  margin auto
+  
+  border 2px solid #dcdcdc
+  border-radius 50%
+  
+  transition 0.2s ease
+  &::before
+    content ''
+    
+    display none
+    width 12px
+    height 12px
+    
+    background-color #da1b40
+    
+    border-radius 50%
+    
+.order__form-payment-label-icon
+  width 32px
+  height 24px
+  margin-right 10px
+  
+  background-image url('%=static=%content/credit-card.svg')
+  background-repeat no-repeat
+  background-size 32px 24px
+  
+.order__form-payment-total-price,
+.order__form-payment-total-price-span
+  color #3d3c3b
+  
+.order__form-payment
+  margin-right 45px
+  
+  font-size 19px
+  line-height 23px
+  color #000000
+  
+.order__form-payment-total-price
+  font-size 27px
+  line-height 32px
+  
+.order__form-payment-total-price-span
+  margin-left 5px
+  
+  font-size 21px
+  line-height 25px
+  
+.order__agreement
+  margin-bottom 45px
+  
+.order__agreement-input
+  &:checked + .order__agreement-label
+    .order__agreement-label-indicator
+      background-color #c0c0c0
+      &::before,
+      &::after
+        display block
+  
+.order__agreement-label
+  position relative
+  
+  padding-left 35px
+  
+  font-size 15px
+  line-height 18px
+  color #373535
+  
+  cursor pointer
+  
+.order__agreement-link
+  margin-left 5px
+  
+  font-size 15px
+  line-height 18px
+  color #373535
+  
+.order__agreement-label-indicator
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  
+  box-sizing border-box
+  width 23px
+  height 23px
+  margin auto
+  
+  border 2px solid #c0c0c0
+  border-radius 5px
+
+  transition 0.2s ease
+  &::before,
+  &::after
+    content ''
+    
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    
+    display none
+    margin auto
+    
+    height 2px
+    background-color #fdfaef
+  &::before
+    right 11px
+    bottom -3px
+    
+    width 45%
+
+    transform rotate(45deg)
+  &::after
+    right -5px
+    bottom 2px
+    
+    width 85%
+
+    transform rotate(-45deg)
+    
+.order__submit-button
+  reset-button()
+  
+  box-sizing border-box
+  min-width 340px
+  padding 10px
+  
+  font-size 19px
+  line-height 23px
+  color #ffffff
+  
+  background-color #ee4543
+  
+  border-radius 2px
+  
+  transition 0.2s ease
+  &:hover
+    background-color #FC471E
+    
+@media(max-width 1260px)
+  .order__basket-headline-good
+    font-size 14px
+    line-height 17px
+    
+@media(max-width 1200px)
+  .order
+    padding-right 0
+    
+  .order__form
+    width auto
+    
+@media(max-width 960px)
+  .order__row
+    padding 0 20px
+  
+  .order__form-payment
+    margin-right 15px
+    
+@media(max-width 890px)
+  .order__form-list-payment
+    position relative
+    
+    justify-content space-between
+    
+  .order__form-payment-items
+    &:last-child
+      position absolute
+      top 50px
+      right 0
+    
+@media(max-width 780px)
+  .order__basket__img-content
+    padding-left 10px
+    
+  .order__basket__img-wrap
+    margin-right 5%
+    
+  .order__basket-cart-td
+    padding 10px 0
+    
+  .order__basket-good-pieces
+    display none
+    
+  .order__basket-good-price
+    font-size 19px
+    line-height 22px
+    
+  .order__basket-good-price-span
+    font-size 16px
+    line-height 19px
+    
+  .order__basket-cart-cancel
+    top 0
+    right 0
+    
+    width 20px
+    height 20px
+    
+@media(max-width 768px)
+  .order__total-price
+    margin-right 0
+    
+  .order__basket-title-td
+    width 20%
+    padding 10px 0
+    &--goods
+      width auto
+      
+  .order__basket-headline-good
+    width auto
+    
+    font-size 11px
+    line-height 17px
+    
+@media(max-width 650px)
+  .order__form-list-payment
+    flex-direction column
+    align-items flex-start
+    
+  .order__form-payment-items
+    margin-right 0
+    margin-bottom 20px
+    &:last-child
+      top 120px
+      
+      margin-bottom 0
+    
+@media(max-width 620px)
+  .order__basket__img-wrap
+    display none
+    
+  .order__basket-controls
+    width 60px
+    
+  .order__basket-control
+    height 20px
+    
+  .order__basket-control-number
+    font-size 12px
+    line-height 20px
+    
+  .footer-content__icon-wrap
+    display none
+    
+@media(max-width 600px)
+  .order__basket-headline
+    font-size 12px
+    line-height 15px
+    
+  .order__basket-headline-good
+    font-size 9px
+    line-height 12px
+    
+  .order__basket-good-price
+    width auto
+    
+    font-size 14px
+    line-height 17px
+    
+  .order__basket-good-price-span
+    font-size 12px
+    line-height 15px
+    
+@media(max-width 420px)
+  .order__row
+    padding 0 15px
+  
+  .order__total-price-num
+    margin-top auto
+    margin-bottom auto
+    
+    font-size 21px
+    line-height 24px
+    
+  .order__total-price-span
+    font-size 15px
+    margin-left 5px
+    
+  .order__agreement-label
+    font-size 11px
+    line-height 14px
+    
+@media(max-width 380px)
+  .order__form-content-wrap
+    padding-left 15px
+    padding-right 15px
+    
+  .order__form-content-user
+    margin-bottom 10px
+    
+  .order__form-content-user-icon
+    margin-bottom 0
+    
+  .order__form-list-payment
+    margin-left 0
+  
+  .order__form-payment-items
+    &:last-child
+      left 0
+      right auto
+      
+  .order__basket-cart-cancel
+    width 15px
+    height 15px
+  
+    

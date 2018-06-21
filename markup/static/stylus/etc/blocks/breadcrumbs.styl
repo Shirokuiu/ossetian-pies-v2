@@ -1,0 +1,54 @@
+.breadcrumbs
+  margin-bottom 25px
+  padding-left 5px
+  
+.breadcrumbs__items
+  position relative
+  
+  margin-right 20px
+  &::after
+    content ''
+    
+    position absolute
+    top 0
+    right -14px
+    bottom 0
+    
+    width 6px
+    height 2px
+    margin auto
+    
+    background-color #cecece
+  &:last-child
+    margin-right 0
+    &::after
+      display none
+
+.breadcrumbs__link
+  font-size 15px
+  line-height 18px
+  color #848080
+  
+  transition 0.2s ease
+  &:hover
+    color #d53c36
+    
+@media(max-width 550px)
+  .breadcrumbs
+    &--cart-inner
+      margin-bottom 10px
+      padding-left 0
+      .breadcrumbs__link
+        font-size 12px
+        line-height 15px
+    
+@media(max-width 420px)
+  .breadcrumbs
+    margin-bottom 15px
+    &--cart-inner
+      flex-direction column
+      .breadcrumbs__items
+        margin-right 0
+        &::after
+          display none
+    

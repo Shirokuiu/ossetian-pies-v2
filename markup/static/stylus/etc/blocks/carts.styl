@@ -1,0 +1,680 @@
+.carts
+  margin-bottom 25px
+  &--inner
+    margin-bottom 10px
+    padding-right 8%
+  &--basket
+    margin-bottom 0
+
+.carts__wrap-content
+  position relative
+  &--first
+    z-index 10
+
+.carts__title-wrap
+  margin-left 10px
+  margin-bottom 15px
+
+.carts__title-nav-items
+  margin-right 10px
+  &:last-child
+    margin-right 0
+
+.carts__title-nav-button
+  display flex
+  justify-content center
+  align-items center
+  width 35px
+  height 35px
+  
+  background-color #eaeaea
+  
+  border-radius 5px
+  
+  transition 0.2s ease
+  .menu1,
+  .menu2,
+  .menu3
+    width 15px
+    height 15px
+    
+    fill #010101
+  &:hover
+    background-color #aa5653
+    .menu1,
+    .menu2,
+    .menu3
+      fill #ffffff
+  &--active
+    background-color #aa5653
+    .menu1,
+    .menu2,
+    .menu3
+      fill #ffffff
+      
+.carts__title-nav-button
+  .menu2,
+  .menu3
+    width 20px
+    height 20px
+    
+.carts__wrap
+  &:last-child
+    .carts__good
+      &:last-child
+        margin-right 0
+    
+.carts__good
+  position relative
+  
+  box-sizing border-box
+  width 260px
+  min-height 380px
+  margin-right 2.1%
+  &:hover
+    .carts__good-wrap
+      bottom -45px
+      
+      box-shadow 1px 1px 5px 0px rgba(0,0,0,0.3)
+    .carts__good-headline
+      color #3b7cd1
+    .carts__good-controls
+      display flex
+  &--slider
+    .carts__good-wrap
+      position static
+    .carts__good-controls
+      display flex
+  &--inner
+    width auto
+    padding 20px
+    
+    border 1px solid #dcdcdc
+    .carts__good-img-wrap
+      width 500px
+      margin-bottom 0
+      padding 0
+    .carts__good-controls
+      display flex
+    .carts__good-articul
+      margin-bottom 0
+    .carts__hit
+      margin-right 6.6%
+    .carts__good-basic-prices
+      width 260px
+    .carts__good-basic-price
+      &:last-child
+        border-left 1px solid #dcdcdc
+        border-right 1px solid #dcdcdc
+    .carts__good-basic-prices
+      margin-bottom 0
+    .carts__good-price
+      font-size 43px
+      line-height 51px
+    .carts__good-price-span
+      font-size 24px
+      line-height 29px
+    .carts__good-control-button-wrap
+      width 150px
+    .carts__good-control-button
+      height 100%
+    .carts__good-control-number
+      font-size 24px
+      line-height 48px
+    .carts__good-buy
+      padding 15px 0
+      
+  
+.carts__good-wrap
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  
+  margin auto
+  padding-bottom 15px
+  
+  background-color #ffffff
+  box-shadow 1px 1px 5px 0px rgba(0,0,0,0)
+  
+  border 1px solid #dcdcdc
+  border-radius 5px
+  
+  transition 0.2s ease
+  
+.carts__good-img-wrap
+  margin-bottom 5px
+  padding-top 5px
+  padding-left 5px
+  padding-right 5px
+  
+.carts__good-headline
+  margin-bottom 10px
+  
+  font-size 16px
+  line-height 19px
+  color #000000
+  text-decoration none
+  text-align center
+  
+  transition 0.2s ease
+  &:hover
+    text-decoration underline
+  
+.carts__good-articul
+  margin-bottom 20px
+  
+  font-size 15px
+  line-height 18px
+  color #555555
+  text-align center
+  
+.carts__good-basic-prices
+  margin-bottom 10px
+  
+  border-top 1px solid #dcdcdc
+  border-bottom 1px solid #dcdcdc
+  
+.carts__good-basic-prices-input
+  &:checked + .carts__good-basic-price
+    color #ee4543
+    &::before
+      opacity 1
+  
+.carts__good-basic-price
+  position relative
+  
+  padding 7px 0
+  
+  font-size 16px
+  line-height 19px
+  color #3d3c3b
+  text-align center
+  
+  border-right 1px solid #dcdcdc
+  
+  cursor pointer
+  &:last-child
+    border-right none
+  &::before
+    center-absolute()
+      
+    content ''
+
+    top -1px
+    left -1px
+    right -1px
+    bottom -1px
+
+    border 3px solid #ee4543
+    
+    opacity 0
+    
+    transition 0.2s ease
+  &:hover
+    &::before
+      opacity 1
+  &--active
+    color #ee4543
+    &::before
+      opacity 1
+      
+.carts__good-price,
+.carts__good-price-span
+  font-size 21px
+  line-height 25px
+  color #3d3c3b
+  text-align center
+  
+.carts__good-price-span
+  margin-left 5px
+  
+.carts__good-controls
+  display none
+  margin-top 15px
+  
+.carts__good-control-button-wrap
+  width 90px
+  margin-right 10px
+  
+  background-color #f3f3f5
+  
+.carts__good-control-button
+  reset-button()
+  
+  display flex
+  justify-content center
+  align-items center
+  height 35px
+  span
+    position relative
+    
+    width 33%
+    height 25px
+    &::before,
+    &::after
+      center-absolute()
+      
+      content ''
+      
+      width 100%
+      height 2px
+      
+      background-color #555555
+    &::before
+      transform rotate(90deg)
+  &--dec
+    span
+      &::before
+        display none
+      
+.carts__good-control-number
+  font-size 16px
+  line-height 34px
+  color #555555
+  
+.carts__good-buy
+  box-sizing border-box
+  width 48.1%
+  padding 8px 0
+  
+  font-size 16px
+  line-height 19px
+  color #ffffff
+  
+  background-color #ee4543
+  
+  transition 0.2s ease
+  &:hover
+    background-color #FC471E
+    
+.carts__good-inner-description-wrap
+  width 480px
+    
+.carts__good-inner-description-row
+  position relative
+  
+  margin-bottom 20px
+  padding-left 20px
+  padding-bottom 20px
+  
+  border-bottom 1px solid #eaeaea
+  &--no-border
+    margin-bottom 0
+    padding-bottom 0
+    
+    border-bottom none
+  
+.carts__hit
+  box-sizing border-box
+  min-width 105px
+  padding 5px
+  
+  font-size 13px
+  line-height 15px
+  color #ffffff
+  
+  background-color #65b434
+  
+.carts__good-inner-share
+  display flex
+  justify-content center
+  align-items center
+  width 50px
+  height 50px
+  margin-left auto
+  
+  transition 0.2s ease
+  .share
+    width 32px
+    height 32px
+    
+    fill #d70a2a
+  &:hover
+    background-color #F3F3F5
+  &--clicked
+    background-color #F3F3F5
+    
+.carts__good-inner-socials
+  position absolute
+  right 53px
+  
+  padding 13px 15px
+  
+  background-color #f3f3f5
+  
+.carts__good-inner-title-description
+  width 116px
+  margin-right 30px
+  
+  font-size 16px
+  line-height 19px
+  color #000000
+  
+.carts__good-inner-composition
+  padding-top 5px
+  padding-left 1.4%
+  
+  border-top 1px solid #eaeaea
+  
+.carts__good-inner-composition-headline
+  margin-bottom 20px
+  
+  font-size 16px
+  line-height 19px
+  color #000000
+  
+.carts__good-inner-composition-list-wrap
+  padding-left 1%
+  
+.carts__good-inner-composition-list
+  margin-right 5%
+  &:last-child
+    margin-right 0
+  
+.carts__good-inner-composition-items
+  position relative
+  
+  margin-bottom 15px
+  padding-left 20px
+  
+  font-size 16px
+  line-height 19px
+  color #555555
+  &::before
+    content ''
+    
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    
+    box-sizing border-box
+    width 10px
+    height 10px
+    margin auto
+    
+    border 2px solid #d33e3b
+    border-radius 50%
+  &:last-child
+    margin-bottom 0
+    
+.carts__good-description-headline
+  margin-bottom 10px
+  padding-top 17px
+  
+  font-size 32px
+  line-height 38px
+  color #ad5a55
+  &--order
+    margin-bottom 10px
+    
+@media(max-width 1850px)
+  .carts__good
+    &--index
+      width 31%
+      
+@media(max-width 1800px)
+  .carts__good
+    &--index
+      min-height 355px
+    
+@media(max-width 1670px)
+  .carts__good
+    &--inner
+      .carts__good-img-wrap
+        width 390px
+        
+  .carts__good-inner-description-wrap
+    width 360px
+    
+  .carts__good-inner-title-description
+    margin-right 14px
+    
+    font-size 13px
+    
+@media(max-width 1600px)
+  .carts__good
+    &--index
+      min-height 305px
+    &--slider
+      .carts__good-headline
+        font-size 16px
+        line-height 19px
+    
+  .carts__good-headline
+    font-size 11px
+    line-height 14px
+    
+@media(max-width 1560px)
+  .carts__wrap-content
+    flex-direction column
+    margin-bottom 0
+    
+  .carts__wrap
+    justify-content space-between
+    margin-bottom 22px
+    &:nth-child(1)
+      position relative
+      z-index 5
+    &:nth-child(2)
+      position relative
+      z-index 1
+    
+  .carts__good
+    &--index
+      min-height 440px
+      margin-right 0
+      .carts__good-headline
+        font-size 16px
+        line-height 19px
+        padding 0 5px
+        
+@media(max-width 1560px)
+  .carts__good
+    &--index
+      min-height 410px
+    
+@media(max-width 1310px)
+  .carts
+    &--inner
+      padding-right 0
+      
+  .carts__good
+    &--index
+      min-height 385px
+    &--inner
+      margin-right 0
+      .carts__good-img-wrap
+        width 50%
+        
+  .carts__good-inner-description-wrap
+    width 480px
+    
+  .description
+    &--cart-inner
+      display none
+      
+@media(max-width 1199px)
+  .carts__good
+    &--index
+      .carts__good-wrap
+        position static
+      .carts__good-controls
+        display flex
+    &--inner
+      .carts__good-img-wrap
+        width auto
+      .carts__good-basic-prices
+        margin-left auto
+      .carts__good-price
+        margin-left auto
+      .carts__good-controls
+        justify-content flex-end
+        
+  .carts__good-inner-description-wrap
+    width auto
+    
+  .carts__good-inner-title-description
+    font-size 16px
+    line-height 19px
+    
+@media(max-width 960px)
+  .carts__good-description-row-top
+    padding 0 20px
+  
+  .carts__good-description-headline
+    &--order
+      padding 0 20px
+      
+@media(max-width 870px)
+  .carts__good-inner-description-row
+    padding-left 0
+    
+  .carts__good-inner-composition
+    padding-left 0
+    
+  .page-content__inner-text
+    width auto
+    padding 0 20px
+    
+  .page-content__features-slider
+    padding 0 20px
+    
+  .carts__good
+    &--slider
+      width auto
+      
+@media(max-width 768px)
+  .carts
+    margin-bottom 15px
+  
+  .carts__good
+    &--index
+      width auto
+      .carts__good-img-wrap
+        padding 0
+      .carts__good-control-button-wrap
+        width auto
+        flex-grow 1
+      .carts__good-control-button
+        span
+          &::before,
+          &::after
+            width 30%
+    &--slider
+      .carts__good-headline
+        font-size 12px
+        line-height 15px
+        
+  .carts__wrap
+    &:nth-child(1)
+      flex-direction column
+    &:nth-child(2)
+      display none
+      margin-bottom 0
+      
+  .carts__wrap-content
+    &--last
+      display none
+      
+  .carts__title-nav-list
+    display none
+    
+  .carts__title-wrap
+    margin-left 15px
+        
+@media(max-width 670px)
+  .carts__good-inner-composition-list-wrap
+    flex-direction column
+    
+  .carts__good-inner-composition-list
+    display flex
+    margin-right 0
+    margin-bottom 15px
+    
+  .carts__good-inner-composition-items
+    width 136px
+    margin-right 15px
+    margin-bottom 0
+        
+@media(max-width 649px)
+  .carts__good
+    &--slider
+      margin-right 0
+      .carts__good-headline
+        font-size 17px
+        line-height 20px
+      .carts__good-img-wrap
+        margin-bottom 10px
+      .carts__good-control-button-wrap
+        flex-grow 1
+        width auto
+      .carts__good-control-button 
+        span
+          &::before,
+          &::after
+            width 30%
+            
+@media(max-width 550px)
+  .carts__good-description-headline
+    padding-top 0
+    
+    font-size 21px
+    line-height 24px
+    
+@media(max-width 440px)
+  .carts__good
+    &--inner
+      box-sizing border-box
+      width 100%
+      padding 15px
+      
+      border-left none
+      border-right none
+      .carts__good-price
+        font-size 33px
+        line-height 36px
+      .carts__good-basic-prices
+        width 100%
+        margin-left 0
+      .carts__good-price
+        font-size 21px
+        line-height 24px
+      .carts__good-price-span
+        font-size 15px
+        line-height 18px
+      .carts__good-control-button-wrap
+        flex-grow 1
+        width auto
+      .carts__good-control-number
+        font-size 19px
+        line-height 40px
+      .carts__good-buy
+        padding 10px 0
+        
+  .carts__good-description-row-top
+    padding 0 15px
+    
+  .carts__good-inner-description-row
+    padding-bottom 15px
+    
+  .carts__good-inner-description-row-weight-wrap
+    flex-direction column
+    margin-bottom 15px
+    
+  .carts__good-inner-title-description
+    margin-right 0
+    &--weight
+      margin-bottom 15px
+    
+    font-size 14px
+
+@media(max-width 420px)
+  .carts__good-description-headline
+    font-size 21px
+    line-height 24px
+    
+  .carts__title-wrap
+    padding-top 15px

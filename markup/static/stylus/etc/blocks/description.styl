@@ -1,0 +1,240 @@
+.description
+  padding 20px 0
+  &--cart-inner
+    box-sizing border-box
+    width 380px
+    padding 0
+    .description__row-bottom
+      box-sizing border-box
+      height 100%
+      padding-top 45px
+      padding-left 12%
+      padding-bottom 45px
+  
+.description__row-top
+  margin-bottom 20px
+  
+.description__aside
+  width 315px
+  
+.description__aside-inner
+  min-height 165px
+  
+  background-image url('%=static=%content/aside-map.jpg')
+  background-repeat no-repeat
+  background-size cover
+  
+.description__aside-title
+  display inline-block
+  margin-top 20px
+  margin-left 15px
+  padding 5px 10px
+  
+  font-size 13px
+  line-height 15px
+  font-weight 600
+  color #ffffff
+  
+  background-color rgba(178, 103, 98, 0.8)
+  
+.description__aside-text
+  padding 10px 20px
+  
+  font-size 17px
+  line-height 20px
+  font-weight 600
+  color #ffffff
+  
+  background-color rgba(234, 84, 60, 0.8)
+  
+.description__slider-wrap
+  width 65%
+  margin 0 15px
+  
+.description__slider
+  position relative
+  .owl-nav
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    
+    display flex
+    justify-content space-between
+    height 50px
+    margin auto
+    padding 0 30px
+  .owl-prev,
+  .owl-next
+    margin 0 !important
+    span
+      position relative
+      
+      display block
+      width 30px
+      height 50px
+      
+      font-size 0
+      &::before,
+      &::after
+        center-absolute()
+        
+        content ''
+        
+        width 100%
+        height 6px
+        
+        background-color white
+      &::before
+        top 18px
+        
+        transform rotate(45deg)
+      &::after
+        bottom 18px
+        
+        transform rotate(-45deg)
+      &:focus
+        outline none !important
+    &:hover
+      background-color transparent !important
+    &:focus
+      outline none !important
+  .owl-next
+    transform rotate(180deg)
+  .owl-dots
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    
+    display flex
+    justify-content center
+    height 50px
+    margin auto
+  .owl-dot
+    span
+      background-color #dcdcdc !important
+    &:hover
+      span
+        background-color #ffffff !important
+    &:focus
+      outline none !important
+      span
+        outline none !important
+    &.active
+      span
+        background-color #ffffff !important
+  
+.description__slider-slide
+  box-sizing border-box
+  height 345px
+  
+  background-image url('%=static=%content/description-slider-img.jpg')
+  background-repeat no-repeat
+  background-size cover
+  
+.description__slider-slide-text
+  box-sizing border-box
+  min-width 720px
+  padding 20px
+  
+  font-size 29px 
+  line-height 34px
+  color #ffffff
+  
+  background-color rgba(234, 84, 60, 0.9)
+  
+.description__row-bottom
+  padding 15px 0
+  
+  background-color #fdfaef
+  
+.description__row-bottom-icon
+  width 64px
+  height 64px
+  margin-right 25px
+  
+.description__row-bottom-text
+  width 215px
+  
+  font-size 16px
+  line-height 19px
+  color #555555
+  
+@media(max-width 1670px)
+  .description
+    &--cart-inner
+      .description__row-bottom
+        padding-left 5%
+        
+@media(max-width 1420px)
+  .description
+    &--cart-inner
+      width auto
+      .description__row-bottom
+        width 215px
+      .description__row-bottom-icon
+        width 32px
+        height 32px
+      .description__row-bottom-text
+        font-size 12px
+        line-height 15px
+        
+@media(max-width 1350px)
+  .description__slider
+    .owl-nav
+      padding 0 5px
+        
+@media(max-width 1320px)
+  .description__aside-text
+    font-size 14px
+    line-height 17px
+    
+@media(max-width 1300px)
+  .description__row-bottom-icon
+    width 44px
+    height 44px
+    
+  .description__row-bottom-text
+    width 190px
+    
+@media(max-width 1270px)
+  .description__slider-slide-text
+    min-width 550px
+    
+    font-size 20px
+    line-height 23px
+  
+@media(max-width 1199px)
+  .description__aside
+    display none
+    
+  .description__slider-wrap
+    margin 0
+        
+@media(max-width 1160px)
+  .description__row-top
+    margin-bottom 0
+    
+  .description__row-bottom
+    display none
+    
+@media(max-width 768px)
+  .description__slider-wrap
+    padding 0 5px
+  
+  .description__slider-slide
+    background-image url('%=static=%content/description-slider-img-mobile.jpg')
+    
+@media(max-width 640px)
+  .description__slider-slide-text
+    min-width auto
+    
+    font-size 14px
+    line-height 17px
+    
+@media(max-width 420px)
+  .description
+    display none
+        

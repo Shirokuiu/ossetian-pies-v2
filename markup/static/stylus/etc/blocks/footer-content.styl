@@ -1,0 +1,184 @@
+.footer-content__row-top
+  padding 10px 0
+  
+  background-color #ef7371
+
+.footer-content__row-top-logo-wrap
+  margin-left 2%
+  margin-right 5%
+  
+.footer-content__row-bottom
+  padding-top 50px
+  padding-bottom 25px
+  
+  background-color #ee4543
+  
+.footer-content__description
+  padding-left 2%
+  margin-right 9%
+  
+.footer-content__list
+  margin-right 9%
+  &:last-child
+    margin-right 0
+  
+.footer-content__lists-items
+  margin-bottom 10px
+  &:last-child
+    margin-bottom 0
+  
+.footer-content__lists-link
+  font-size 16px
+  line-height 19px
+  color rgba(255, 255, 255, 0.8)
+  
+  transition 0.3s ease
+  &:hover
+    color rgba(255, 255, 255, 1)
+    
+.footer-content__icon
+  margin-right 2%
+  
+  bg($footer-row-top-icon)
+  
+.footer-content__copyright-text
+  margin-left 2%
+  
+  font-size 15px
+  line-height 18px
+  color #ffffff
+  
+.footer-content__copyright-link
+  display flex
+  align-items center
+  margin-right 2%
+  
+  font-size 15px
+  line-height 18px
+  color rgba(255, 255, 255, 0.8)
+  
+  transition 0.3s ease
+  &:hover
+    color rgba(255, 255, 255, 1)
+  &::after
+    content ''
+    
+    margin-left 20px
+    
+    bg($developers)
+    
+@media(max-width 1560px)
+  .footer-content__row-top-logo-wrap
+    margin-left 0
+    margin-right 0
+    
+  .footer-content__description
+    margin-right 5% 
+    padding-left 0
+    
+  .footer-content__list
+    margin-right 3%
+    
+@media(max-width 1400px)
+  .footer-content__row-top-logo-wrap
+    margin-right 2%
+    
+@media(max-width 1230px)
+  .footer-content__description
+    margin-right 3%
+    
+@media(max-width 1199px)
+  .footer-content__row-top
+    display none
+    
+  .footer-content__description
+    display none
+    
+  .footer-content__lists-wrap
+    justify-content space-around
+    
+@media(max-width 970px)
+  .footer-content__list
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4)
+      display none
+    &:nth-child(1)
+      display flex
+      flex-grow 1
+      justify-content space-around
+      margin-right 0
+      
+@media(max-width 750px)
+  .footer-content__copyright-text
+    margin-left 0
+    
+    font-size 12px
+    line-height 15px
+    
+  .footer-content__copyright-link
+    margin-right 0
+    
+    font-size 12px
+    line-height 15px
+    
+@media(max-width 620px)
+  .footer-content
+    padding 20px 0
+    
+    background-color #ee4543
+  
+  .footer-content__row-bottom
+    position:relative
+    
+    padding-top 0
+    padding-bottom 0
+    
+    background-color transparent
+    
+  .footer-content__list
+    &:nth-child(1)
+      flex-direction column
+      
+  .footer-content__lists-items
+    margin-bottom 5px
+    &:last-child
+      margin-bottom 0
+      
+  .footer-content__lists-link
+    font-size 14px
+    line-height 17px
+    
+  .footer-content__copyright-wrap
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    
+    flex-direction column-reverse
+    align-items flex-start
+    
+  .footer-content__copyright-link
+    margin-top auto
+    
+@media(max-width 510px)
+  .footer-content__copyright-wrap
+    align-items flex-end
+    padding 0
+    padding-right 20px
+    
+  .footer-content__copyright-link
+    flex-direction column
+    align-items flex-start
+    margin-top 0
+    &::after
+      margin-top 5px
+      margin-left auto
+      
+@media(max-width 420px)
+  .footer-content__list
+    &:nth-child(1)
+      padding-left 15px
+    
+      
+  

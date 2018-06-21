@@ -1,0 +1,88 @@
+.page-header
+  background-image url('%=static=%content/page-header-bg.jpg')
+  background-repeat no-repeat
+  background-size cover
+  &--sticky
+    padding-bottom 50px
+  &--cart-inner
+    margin-bottom 15px
+  
+.page-header__row-top
+  padding-top 15px
+  padding-left 2%
+  padding-right 6%
+  padding-bottom 15px
+  
+.page-header__items
+  &--mr10
+    margin-right 10%
+  
+.page-header__main-title
+  width 205px
+  margin-left 10px
+  
+  font-size 17px
+  line-height 20px
+  font-weight 600
+  &--min
+    font-size 13px
+    line-height 15px
+  &--footer
+    color white
+    
+@media(max-width 1720px)
+  .page-header__items
+    &--mr10
+      margin-right 3%
+      
+@media(max-width 1600px)
+  .page-header__main-title
+    &--min
+      width 130px
+      
+@media(max-width 1530px)
+  .page-header__row-top
+    padding-left 0
+    padding-right 0
+    
+  .page-header__main-title
+    font-size 0.9vw
+    line-height 1.31vw
+    
+  .user-block__delivery-text
+    font-size 0.9vw
+    line-height 1.1vw
+    
+  .user-block__tel-link
+    font-size 1.1vw
+    line-height 1.2vw
+    
+@media(max-width 1400px)
+  .page-header__items
+    &--mr10
+      margin-right 1%
+  
+  .page-header__main-title
+    width 155px
+    
+    font-size 12.6px
+    line-height 15px
+    
+@media(max-width 720px)
+  .page-header__row-top
+    li
+      &:last-child
+        display none
+        
+@media(max-width 530px)
+  .page-header__row-top
+    justify-content center
+    li
+      &:nth-child(2)
+        display none
+        
+@media(max-width 420px)
+  .page-header__row-top
+    display none
+  
+  

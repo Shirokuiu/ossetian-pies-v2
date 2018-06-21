@@ -1,0 +1,388 @@
+.page-content__description
+  width 70%
+  margin-bottom 100px
+  &--basket
+    box-sizing border-box
+    flex-basis auto
+    width 86%
+    margin-left auto
+    margin-bottom 0
+    padding 0 20px
+    padding-bottom 45px
+    
+    background-color #ffffff
+  
+.page-content__features
+  margin-bottom 25px
+  
+.page-content__features-title
+  padding-left 10px
+  margin-bottom 15px
+  
+  font-size 24px
+  line-height 29px
+  font-weight 600
+  color #ad5a55
+  
+.page-content__features-text
+  margin-bottom 20px
+  
+  font-size 16px
+  line-height 19px
+  color #555555
+  
+.page-content__features-list-wrap
+  padding 20px 0
+  
+  background-color #fdfaef
+  
+  border-left 6px solid #ef7371
+  
+.page-content__features-list-title
+  margin-left 2%
+  margin-right 4%
+  
+  font-size 19px
+  line-height 23px
+  color #ad5a55
+  
+.page-content__features-list
+  margin-right 6%
+  
+.page-content__features-items
+  position relative
+  
+  margin-bottom 25px
+  &::before
+    content ''
+    
+    position absolute
+    top 0
+    bottom 0
+    
+    width 10px
+    height 10px
+    margin auto
+    
+    background-color #d33e3b
+    
+    border-radius 50%
+  &:last-child
+    margin-bottom 0
+  
+.page-content__features-link
+  padding-left 20px
+  
+  font-size 16px
+  line-height 19px
+  color #377ad4
+  &:hover
+    text-decoration underline
+  
+.page-content__features-slider-wrap
+  position relative
+  .owl-nav
+    position absolute !important
+    left 0 !important
+    right 0 !important
+    bottom -72px !important
+    z-index 1 !important
+    
+    display block !important
+  .owl-prev,
+  .owl-next
+    position relative
+    
+    width 40px
+    height 40px
+    margin 0 !important
+    
+    background-color #dcdcdc !important
+    
+    border-radius 5px !important
+    
+    cursor pointer !important
+    &::before,
+      &::after
+        center-absolute()
+        
+        content ''
+        
+        width 60%
+        height 3px
+        
+        background-color white
+      &::before
+        top 15px
+        
+        transform rotate(45deg)
+      &::after
+        bottom 15px
+        
+        transform rotate(-45deg)
+      &:focus
+        outline none !important
+    span
+      display none
+  .owl-prev
+    margin-right 100px !important
+  .owl-next
+    transform rotate(180deg)
+  .owl-dots
+    position absolute !important
+    left 0 !important
+    right 0 !important
+    z-index 10 !important
+    
+    display block !important
+    width 100px !important
+    margin auto !important
+    margin-top 35px !important
+  .owl-dot
+    &.active
+      span
+        background-color #d33e3b !important
+        
+.page-content__table-content
+  margin-bottom 35px
+  
+.page-content__table-row-headline
+  background-color #f37d7b
+  
+.page-content__table-td
+  padding 10px 0
+  &--first
+    width 29.3%
+  &--last
+    width 22.5%
+  &--content
+    border-top 3px solid #ffffff
+    border-bottom 3px solid #ffffff
+  &--content-first
+    position relative
+    &::before
+      content ''
+
+      position absolute
+      top 0
+      left 0
+      bottom 0
+
+      width 6px
+      margin auto
+
+      background-color transparent
+  &--basket
+    position relative
+    &:hover
+      .page-content__table-button
+        display block
+  
+.page-content__table-text
+  padding 15px 0
+  
+  font-size 19px
+  line-height 23px
+  
+  border-right 2px solid #ffffff
+  &--headline
+    font-size 17px
+    line-height 20px
+    color #ffffff
+  &--white
+    color #ffffff
+  &--no-border
+    border-right none
+    
+.page-content__table-row
+  background-color #fff3cc
+  &:nth-child(2n)
+    background-color #fcf7e5
+  &:hover
+    .page-content__table-td
+      &--content-first
+        &::before
+          background-color #ef7371
+          
+.page-content__table-button
+  center-absolute()
+  
+  top 20px
+  bottom 20px
+  
+  display none
+  width 70%
+  
+  font-size 16px
+  line-height 19px
+  color #ffffff
+  
+  background-color #53ab1d
+  
+  border-radius 5px
+  
+.page-content__inner-text
+  width 92%
+  margin-bottom 35px
+  
+  font-size 16px
+  line-height 19px
+  color #555555
+  
+@media(max-width 1760px)
+  .page-content__features-list-wrap
+    padding-right 20px
+  
+  .page-content__features-list
+    margin-right 0
+  
+@media(max-width 1650px)
+  .page-content__features-slider-wrap
+    .owl-prev
+      margin-right 200px !important
+    .owl-dots
+      width 190px !important
+      
+@media(max-width 1600px)
+  .page-content__features-list-title
+    margin-left 10px
+    margin-right 25px
+    
+    font-size 16px
+    line-height 19px
+    
+  .page-content__features-items
+    &::before
+      width 8px
+      height 8px
+    
+  .page-content__features-link
+    font-size 14px
+    line-height 17px
+    
+@media(max-width 1480px)
+  .page-content__table-text
+    font-size 16px
+    line-height 19px
+    
+@media(max-width 1400px)
+  .page-content__features-list-wrap
+    flex-direction column
+    align-items flex-start
+    padding-top 15px
+    padding-bottom 20px
+    
+  .page-content__features-list-title
+    margin-right 0
+    margin-bottom 20px
+    
+    align-self center
+    
+  .page-content__features-list-description
+    align-self center
+    
+  .page-content__features-list
+    margin-right 30px
+    &:last-child
+      margin-right 0
+      
+@media(max-width 1340px)
+  .page-content__table-td
+    &--last
+      width 20.5%
+      
+  .page-content__table-text
+    font-size 14px
+    line-height 17px
+    
+  .page-content__table-button
+    font-size 12px
+    line-height 15px
+  
+@media(max-width 1200px)
+  .page-content__description
+    &--basket
+      box-sizing border-box
+      width 100%
+      padding 0 20px
+      padding-bottom 40px
+      
+@media(max-width 1089px)
+  .page-content__features-slider-wrap
+    .owl-prev
+      margin-right 30px !important
+    .owl-dots
+      display none !important
+      
+@media(max-width 970px)
+  .page-content__table-row-headline
+    .page-content__table-td
+      &:nth-child(5)
+        .page-content__table-text
+          border-right none
+  
+  .page-content__table-td
+    &--first
+      width 46.3%
+    &--last
+      display none
+    &--content
+      &:nth-child(5)
+        .page-content__table-text
+          border-right none
+      
+@media(max-width 960px)
+  .page-content__description
+    &--basket
+      padding 0 0
+      
+@media(max-width 940px)
+  .page-content__features-list-wrap
+    display none
+      
+@media(max-width 870px)
+  .page-content__inner-text
+    width auto
+    padding 0 20px
+    
+  .page-content__features-slider
+    padding 0 20px
+    
+@media(max-width 768px)
+  .page-content__features
+    display none
+    
+  .page-content__features-title
+    padding-left 15px
+    
+@media(max-width 560px)
+  .page-content__table-button
+    font-size 9px
+    line-height 12px
+    
+@media(max-width 550px)
+  .page-content__inner-text
+    margin-bottom 15px
+    
+    font-size 12px
+    line-height 15px
+    
+  .page-content__features-title
+    padding-left 0
+    
+    font-size 21px
+    line-height 24px
+    
+  .page-content__table-content
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    

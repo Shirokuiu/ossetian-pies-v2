@@ -1,0 +1,39 @@
+.row
+  row()
+  &--reverse
+    row-reverse()
+  &--jc-fs
+    row-jc-fs()
+  &--jc-fe
+    row-jc-fe()
+  &--jc-c
+    row-jc-c()
+  &--jc-sa
+    row-jc-sa()
+  &--jc-sb
+    row-jc-sb()
+  &--ai-c
+    row-ai-c()
+  &--as-fs
+    row-as-fs()
+  
+  &--wrap
+    wrap()
+    
+.grow
+  flex-grow 1
+  
+@media(max-width 1760px)
+  .row
+    &--media1760-jc-sb
+      justify-content space-between
+  
+@media(max-width 1280px)
+  .row
+    &--as-fs-media1280-as-center
+      align-self center
+      
+@media(max-width 1199px)
+  .row
+    &--media1199-column
+      flex-direction column

@@ -1,0 +1,999 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        header.page-header
+          .container
+            ul.page-header__row-top.list.row.row--jc-sb.row--ai-c
+              li.page-header__items.page-header__items--mr10.row.row--ai-c
+                .icons.icons--pie
+                h2.page-header__main-title.text--uppercase Доставка осетинских пирогов в Москве
+              li.row.row--ai-c
+                .icons.icons--years
+                h2.page-header__main-title.page-header__main-title--min.text--uppercase Лет
+                  br
+                  | выпекаем 
+                  br
+                  | вкусные пироги
+              li.grow.row--as-fs
+                .user-block.row.row--jc-sb
+                  form.user-block__search.row.row--ai-c(action="action.php" method="post")
+                    .user-block__search-input-wrap
+                      input.user-block__search-input.input(type="text" name="search" placeholder="Поиск")
+                    span.user-block__search-icon.d-block
+                      != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'search'})
+                  .user-block__delivery.row.row--ai-c
+                    .icons.icons--delivery
+                      != pugHelpers.Icon.call(locals, {iconName: 'delivery', className: 'delivery'})
+                    p.user-block__delivery-text.text Бесплатная доставка при заказе от 1 000 руб.
+                  .user-block__tel
+                    .user-block__tel-link-wrap.row.row--ai-c
+                      .icons.icons--tel
+                        != pugHelpers.Icon.call(locals, {iconName: 'tel', className: 'tel'})
+                      a.user-block__tel-link.text--td-none(href="tel:84952009709") 8 (495) 200-97-09
+                    p.user-block__tel-text.text Звоните с 09:00 до 21:00
+          nav
+            ul.main-nav.list.row
+              li.main-nav__items.main-nav__items--empty.grow
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                .main-nav__headline-link.main-nav__headline-link--catalog.grow.row.row--jc-c.row--ai-c.text--td-none
+                  .main-nav__headline-wrap.row.row--ai-c
+                    .icons.icons--burger.icons--mr20
+                      != pugHelpers.Icon.call(locals, {iconName: 'burger', className: 'burger'})
+                    h2.main-nav__headline.text.text--uppercase Каталог пирогов
+                  span.main-nav__menu-arrow
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'arrow'})
+                  .main-nav__drop-down.main-nav__drop-down--catalog.hidden
+                    h3.main-nav__drop-down-headline.text.text--uppercase Осетинские пироги
+                    .main-nav__drop-down-border
+                    .main-nav__drop-down-list-wrap
+                      ul.main-nav__drop-down-list.list.row.row--jc-sb
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/meat.svg")
+                          a.main-nav__link.text--td-none(href="#") С мясом
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/chicken.svg")
+                          a.main-nav__link.text--td-none(href="#") С курицей
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/fish.svg")
+                          a.main-nav__link.text--td-none(href="#") С рыбой
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/cheese.svg")
+                          a.main-nav__link.text--td-none(href="#") С сыром
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/cabbage.svg")
+                          a.main-nav__link.text--td-none(href="#") С капустой
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/potato.svg")
+                          a.main-nav__link.text--td-none(href="#") С картошкой
+                      ul.main-nav__drop-down-list.list.row.row--jc-sb
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/mushroom.svg")
+                          a.main-nav__link.text--td-none(href="#") С грибами
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/herb.svg")
+                          a.main-nav__link.text--td-none(href="#") С зеленью
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/onion.svg")
+                          a.main-nav__link.text--td-none(href="#") С луком
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/pepper.svg")
+                          a.main-nav__link.text--td-none(href="#") С перцем
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/butternut-squash.svg")
+                          a.main-nav__link.text--td-none(href="#") С кабачком
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/orange.svg")
+                          a.main-nav__link.text--td-none(href="#") Сладкие
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                .main-nav__headline-link.main-nav__headline-link--buy.grow.row.row--jc-c.row--ai-c.text--td-none
+                  h2.main-nav__headline.main-nav__headline--menu.text.text--uppercase Где купить
+                  span.main-nav__menu-arrow
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'arrow'})
+                  .main-nav__drop-down.main-nav__drop-down--buy.hidden
+                    .main-nav__drop-down-list-wrap
+                      ul.main-nav__drop-down-list.list.row.row--jc-sb
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/payment-method.svg")
+                          a.main-nav__link.text--td-none(href="#") Условия оплаты
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/delivery-nav.svg")
+                          a.main-nav__link.text--td-none(href="#") Условия доставки
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="#")
+                  h2.main-nav__headline.text.text--uppercase О компании
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="#")
+                  h2.main-nav__headline.text.text--uppercase Контакты
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="#")
+                  h2.main-nav__headline.text.text--uppercase Акции
+              li.main-nav__items.main-nav__items--tel.hidden
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="tel:84952009709")
+                  h2.main-nav__headline.main-nav__headline--tel.text.text--uppercase.row.row--reverse 8 (495) 200-97-09
+                    .icons.icons--tel.icons--mr15.icons--tel-fill-white
+                      != pugHelpers.Icon.call(locals, {iconName: 'tel', className: 'tel'})
+              li.main-nav__items.main-nav__items--basket.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.main-nav__headline-link--basket.grow.row.row--ai-c.text--td-none(href="#")
+                  .icons.icons--basket
+                  .main-nav__basket-title-wrap.row
+                    p.main-nav__basket-goods.text 0
+                    p.main-nav__basket-text.text товаров
+                  .main-nav__basket-title-wrap.row
+                    p.main-nav__basket-num.text 0
+                    p.main-nav__basket-text.text руб.
+            
+        main.page-content
+          .description
+            .container
+              .description__row-top.row
+                .description__aside
+                  ul.list
+                    li.list--items-mb15
+                      .description__aside-inner.column.column--jc-sb
+                        .b
+                          h2.description__aside-title.text.text--uppercase Москва
+                        p.description__aside-text.text Доставка 45 минут, точно ко времени
+                    li.list--items-mb15
+                      .description__aside-inner.column.column--jc-sb
+                        .b
+                          h2.description__aside-title.text.text--uppercase Москва
+                        p.description__aside-text.text Доставка 45 минут, точно ко времени
+                .description__slider-wrap.grow
+                  .description__slider.owl-carousel.owl-theme
+                    .description__slider-slide.column.column--jc-c.column--ai-c
+                      p.description__slider-slide-text.text.text--uppercase.text--fw800.text--center Акция! В день рождения скидка 10%
+                    .description__slider-slide.column.column--jc-c.column--ai-c
+                      p.description__slider-slide-text.text.text--uppercase.text--fw800.text--center Акция! В день рождения скидка 20%
+                    .description__slider-slide.column.column--jc-c.column--ai-c
+                      p.description__slider-slide-text.text.text--uppercase.text--fw800.text--center Акция! В день рождения скидка 30%
+                .description__aside
+                  ul.list
+                    li.list--items-mb15
+                      .description__aside-inner.column.column--jc-sb
+                        .b
+                          h2.description__aside-title.text.text--uppercase Москва
+                        p.description__aside-text.text Доставка 45 минут, точно ко времени
+                    li.list--items-mb15
+                      .description__aside-inner.column.column--jc-sb
+                        .b
+                          h2.description__aside-title.text.text--uppercase Москва
+                        p.description__aside-text.text Доставка 45 минут, точно ко времени
+              ul.description__row-bottom.list.row.row--jc-sa
+                li.row.row--ai-c
+                  img.description__row-bottom-icon(src="%=static=%img/content/signs.svg")
+                  p.description__row-bottom-text.text.text--fw300 Доставка 45 минут, точно ко времени
+                li.row.row--ai-c
+                  img.description__row-bottom-icon(src="%=static=%img/content/credit-card.svg")
+                  p.description__row-bottom-text.text.text--fw300 Оплата наличными и по карте
+                li.row.row--ai-c
+                  img.description__row-bottom-icon(src="%=static=%img/content/apple-pie.svg")
+                  p.description__row-bottom-text.text.text--fw300 Пироги доставляются всегда горячими
+                li.row.row--ai-c
+                  img.description__row-bottom-icon(src="%=static=%img/content/delivery-truck.svg")
+                  p.description__row-bottom-text.text.text--fw300 Бесплатная доставка при заказе от 1 000 руб.
+          .container.row.row--reverse
+            .page-content__description.grow
+              section.carts
+                
+                
+              section.page-content__features-slider
+                h2.page-content__features-title.text.text--fw600 Популярные осетинские пироги
+                .page-content__features-slider-wrap.owl-carousel.owl-theme
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide1")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide1" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide1")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide1")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide2")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide2" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide2")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide2")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide3")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide3" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide3")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide3")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide4")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide4" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide4")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide4")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide5")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide5" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide5")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide5")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide6")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide6" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide6")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide6")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide7")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide7" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide7")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide7")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide8")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide8" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide8")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide8")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide9")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide9" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide9")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide9")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide10")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide10" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide10")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide10")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide11")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide11" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide11")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide11")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide12")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide12" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide12")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide12")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide13")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide13" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide13")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide13")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide14")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide14" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide14")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide14")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide15")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide15" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide15")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide15")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide16")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide16" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide16")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide16")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide17")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide17" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide17")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide17")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                  .page-content__features-slider-slide
+                    .carts__good.carts__good--slider
+                      .carts__good-wrap
+                        .carts__good-img-wrap
+                          img.carts__good-img(src="%=static=%img/content/carts-good-img.jpg")
+                        a.carts__good-headline.text--uppercase.text--fw600.d-block(href="#") Осетинский пирог с капустой, яйцом и жареным луком
+                        p.carts__good-articul.text.text--fw300 Артикул: 6912
+                        .carts__good-controls-wrap(data-basic-price="750" data-total-price="750" data-count="1")
+                          ul.carts__good-basic-prices.list.row
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide18")
+                                p.carts__good-basic-price.text.text--fw600 0,8 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide18" checked)
+                                p.carts__good-basic-price.text.text--fw600 1,0 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide18")
+                                p.carts__good-basic-price.text.text--fw600 1,2 кг
+                            li.grow
+                              label
+                                input.carts__good-basic-prices-input.input.input--radio(type="radio" name="priceGroupSlide18")
+                                p.carts__good-basic-price.text.text--fw600 1,4 кг
+                          .row.row--jc-c
+                            p.carts__good-price.text.text--fw600 750
+                            span.carts__good-price-span.text.text--fw600.m--t-a руб.
+                          .carts__good-controls.row.row--jc-c
+                            .carts__good-control-button-wrap.row
+                              button.carts__good-control-button.carts__good-control-button--dec.grow(type="button")
+                                span
+                              p.carts__good-control-number.text.text--fw600 1
+                              button.carts__good-control-button.carts__good-control-button--inc.grow(type="button")
+                                span
+                            button.carts__good-buy.button.text--fw600.text--uppercase.text--td-none.text--center.d-block.add(type="button") Купить
+                      
+            aside.filter(action="action.php" method="post")
+              .filter__content
+                h2.filter__headline.text.text--fw600 Фильтр по параметрам:
+                .filter__content-range-controls
+                  h3.filter__headline.filter__headline--no-border.text.text--fw600 Вес пирога (грамм)
+                  .filter__range-wrap
+                    ul.filter__range-list.row.row--jc-sb.list
+                      li.filter__range-items.text--fw300 800
+                      li.filter__range-items.text--fw300 1000
+                      li.filter__range-items.text--fw300 1200
+                      li.filter__range-items.text--fw300 1400
+                    input.filter__range(type="range" min="0" max="100" value="30")
+                h3.filter__headline.filter__headline--no-border.text.text--fw600 Начинка
+                ul.filter__checkbox-list.list
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox" checked)#filterCheckbox1
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox1") С мясом
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox2
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox2") С курицей
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox3
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox3") С рыбой
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox4
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox4") С сыром
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox5
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox5") С капустой
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox6
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox6") С картошкой
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox7
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox7") С грибами
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox8
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox8") С зеленью
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox9
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox9") С луком
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox10
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox10") С перцем
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox11
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox11") С кабачком
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox12
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox12") Сладкие
+                      span.filter__label-indicator.d-block
+                  li.filter__checkbox-items
+                    input.filter__input.input.input--checkbox(type="checkbox")#filterCheckbox13
+                    label.filter__label.d-block.text--fw300(for="filterCheckbox13") Постные
+                      span.filter__label-indicator.d-block
+                .filter__submit-button-wrap
+                  button.filter__submit-button.button.text--fw600(type="submit") Показать
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__row-top
+            .container.row.row--ai-c
+              .footer-content__row-top-logo-wrap
+                .page-header__items.page-header__items--mr10.row.row--ai-c
+                  .icons.icons--pie.icons--pie-footer
+                  h2.page-header__main-title.page-header__main-title--footer.text--uppercase Доставка осетинских пирогов в Москве
+              ul.main-nav.main-nav--footer.list.row.row--ai-c.grow
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С мясом
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С курицей
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С рыбой
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С сыром
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С капустой
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С картошкой
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С грибами
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") Сладкие
+          .footer-content__row-bottom
+            .container.row.m--b40
+              .footer-content__description
+                .user-block.user-block--footer
+                  ul.user-block__tel.user-block__tel--footer.list
+                    li.user-block__tel-items.list--items-mb5
+                      a.user-block__tel-link.text--td-none(href="tel:84952009709") 8 (495) 200-97-09
+                    li.user-block__tel-items.list--items-mb5
+                      p.user-block__tel-text.text Звоните с 09:00 до 21:00
+                    li.user-block__tel-items.list--items-mb5
+                      p.user-block__tel-text.text Ежедневно ПН-ВС
+                ul.socials.list.row
+                  li.socials__items
+                    a.socials__link.socials__link--vk(href="#" aria-label="вконтакте")
+                  li.socials__items
+                    a.socials__link.socials__link--fb(href="#" aria-label="фейсбук")
+                  li.socials__items
+                    a.socials__link.socials__link--od(href="#" aria-label="одноклассники")
+                  li.socials__items
+                    a.socials__link.socials__link--g(href="#" aria-label="гугл плюс")
+                  li.socials__items
+                    a.socials__link.socials__link--tw(href="#" aria-label="твиттер")
+                  li.socials__items
+                    a.socials__link.socials__link--v(href="#" aria-label="вайбер")
+                  li.socials__items
+                    a.socials__link.socials__link--w(href="#" aria-label="ватсап")
+              .footer-content__lists-wrap.row.grow
+                ul.footer-content__list.list
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") О компании
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Условия доставки
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Условия оплаты
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Акции
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Контакты
+                - for (let i = 0; i < 3; i++)
+                  ul.footer-content__list.list
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с мясом
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с курицей
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с индейкой
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с мясом
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с курицей
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с индейкой
+            .container.row.row--jc-fe.m--b15
+              span.footer-content__icon.d-block
+            .container.row.row--jc-sb.row--ai-c
+              p.footer-content__copyright-text.text.text--fw300 © 2018 Доставка осетинских пирогов
+              a.footer-content__copyright-link.d-block.text--td-none(href="#") Создание и продвижение сайтов
+                
+              
+            
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='%=static=%js/separate-js/owl.carousel.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,327 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content.content--basket
+        header.page-header
+          .container
+            ul.page-header__row-top.list.row.row--jc-sb.row--ai-c
+              li.page-header__items.page-header__items--mr10.row.row--ai-c
+                .icons.icons--pie
+                h2.page-header__main-title.text--uppercase Доставка
+                  br 
+                  | осетинских пирогов
+                  br
+                  | в Москве
+              li.row.row--ai-c
+                .icons.icons--years
+                h2.page-header__main-title.page-header__main-title--min.text--uppercase Лет
+                  br
+                  | выпекаем 
+                  br
+                  | вкусные пироги
+              li.grow.row--as-fs.row--as-fs-media1280-as-center
+                .user-block.row.row--jc-sb
+                  form.user-block__search.row.row--ai-c(action="action.php" method="post")
+                    .user-block__search-input-wrap
+                      input.user-block__search-input.input(type="text" name="search" placeholder="Поиск")
+                    span.user-block__search-icon.d-block
+                      != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'search'})
+                  .user-block__delivery.row.row--ai-c
+                    .icons.icons--delivery
+                      != pugHelpers.Icon.call(locals, {iconName: 'delivery', className: 'delivery'})
+                    p.user-block__delivery-text.text Бесплатная доставка при заказе от 1 000 руб.
+                  .user-block__tel
+                    .user-block__tel-link-wrap.row.row--ai-c
+                      .icons.icons--tel
+                        != pugHelpers.Icon.call(locals, {iconName: 'tel', className: 'tel'})
+                      a.user-block__tel-link.text--td-none(href="tel:84952009709") 8 (495) 200-97-09
+                    p.user-block__tel-text.text Звоните с 09:00 до 21:00
+          nav
+            ul.main-nav.list.row
+              li.main-nav__items.main-nav__items--empty.grow
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                .main-nav__headline-link.main-nav__headline-link--catalog.grow.row.row--jc-c.row--ai-c.text--td-none
+                  .main-nav__headline-wrap.row.row--ai-c
+                    .icons.icons--burger.icons--mr20
+                      != pugHelpers.Icon.call(locals, {iconName: 'burger', className: 'burger'})
+                    h2.main-nav__headline.text.text--uppercase Каталог пирогов
+                  span.main-nav__menu-arrow
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'arrow'})
+                  .main-nav__drop-down.main-nav__drop-down--catalog.hidden
+                    h3.main-nav__drop-down-headline.text.text--uppercase Осетинские пироги
+                    .main-nav__drop-down-border
+                    .main-nav__drop-down-list-wrap
+                      ul.main-nav__drop-down-list.list.row.row--jc-sb
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/meat.svg")
+                          a.main-nav__link.text--td-none(href="#") С мясом
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/chicken.svg")
+                          a.main-nav__link.text--td-none(href="#") С курицей
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/fish.svg")
+                          a.main-nav__link.text--td-none(href="#") С рыбой
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/cheese.svg")
+                          a.main-nav__link.text--td-none(href="#") С сыром
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/cabbage.svg")
+                          a.main-nav__link.text--td-none(href="#") С капустой
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/potato.svg")
+                          a.main-nav__link.text--td-none(href="#") С картошкой
+                      ul.main-nav__drop-down-list.list.row.row--jc-sb
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/mushroom.svg")
+                          a.main-nav__link.text--td-none(href="#") С грибами
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/herb.svg")
+                          a.main-nav__link.text--td-none(href="#") С зеленью
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/onion.svg")
+                          a.main-nav__link.text--td-none(href="#") С луком
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/pepper.svg")
+                          a.main-nav__link.text--td-none(href="#") С перцем
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/butternut-squash.svg")
+                          a.main-nav__link.text--td-none(href="#") С кабачком
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/orange.svg")
+                          a.main-nav__link.text--td-none(href="#") Сладкие
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                .main-nav__headline-link.main-nav__headline-link--buy.grow.row.row--jc-c.row--ai-c.text--td-none
+                  h2.main-nav__headline.main-nav__headline--menu.text.text--uppercase Где купить
+                  span.main-nav__menu-arrow
+                    != pugHelpers.Icon.call(locals, {iconName: 'arrow', className: 'arrow'})
+                  .main-nav__drop-down.main-nav__drop-down--buy.hidden
+                    .main-nav__drop-down-list-wrap
+                      ul.main-nav__drop-down-list.list.row.row--jc-sb
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/payment-method.svg")
+                          a.main-nav__link.text--td-none(href="#") Условия оплаты
+                        li.row.row--ai-c
+                          img.icons.icons--meat(src="%=static=%img/content/delivery-nav.svg")
+                          a.main-nav__link.text--td-none(href="#") Условия доставки
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="#")
+                  h2.main-nav__headline.text.text--uppercase О компании
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="#")
+                  h2.main-nav__headline.text.text--uppercase Контакты
+              li.main-nav__items.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="#")
+                  h2.main-nav__headline.text.text--uppercase Акции
+              li.main-nav__items.main-nav__items--tel.column.column--jc-c.column--ai-c.hidden
+                a.main-nav__headline-link.text.grow.row.row--jc-c.row--ai-c(href="tel:84952009709")
+                  h2.main-nav__headline.main-nav__headline--tel.text.text--uppercase.row.row--reverse 8 (495) 200-97-09
+                    .icons.icons--tel.icons--mr15.icons--tel-fill-white
+                      != pugHelpers.Icon.call(locals, {iconName: 'tel', className: 'tel'})
+              li.main-nav__items.main-nav__items--basket.grow.column.column--jc-c.column--ai-c
+                a.main-nav__headline-link.main-nav__headline-link--basket.grow.row.row--ai-c.text--td-none(href="#")
+                  .icons.icons--basket
+                  .main-nav__basket-title-wrap.row
+                    p.main-nav__basket-goods.text 0
+                    p.main-nav__basket-text.main-nav__basket-text--count.text товаров
+                    p.main-nav__basket-text.main-nav__basket-text--count.main-nav__basket-text--tablet.text шт.
+                  .main-nav__basket-title-wrap.row
+                    p.main-nav__basket-num.text 0
+                    p.main-nav__basket-text.text руб.
+            
+        main.page-content.page-content--basket
+          .row
+            .page-content__description.page-content__description--basket
+              .carts.carts--basket
+                .carts__good-description-row-top
+                  h2.carts__good-description-headline.text.text--fw600 Корзина
+                  ul.breadcrumbs.list.row
+                    li.breadcrumbs__items
+                      a.breadcrumbs__link.text--fw300.text--td-none(href="index.html") Главная
+                    li.breadcrumbs__items
+                      a.breadcrumbs__link.text--fw300.text--td-none(href="index.html") Корзина
+              .order
+                .order__row.row.m--b10
+                  table.order__basket.grow
+                    tr.order__basket-tr
+                      td.order__basket-title-td.order__basket-title-td--goods
+                        h2.order__basket-headline.text.text--fw300.text--center Товары
+                      td.order__basket-title-td
+                        h2.order__basket-headline.text.text--fw300.text--center Цена
+                      td.order__basket-title-td
+                        h2.order__basket-headline.text.text--fw300.text--center Сумма
+                      td.order__basket-title-td
+                        h2.order__basket-headline.text.text--fw300.text--center Количество
+                    - for (let i = 0; i < 3; i++)
+                      tr.order__basket-tr.order__basket-tr--basket(data-basic-price="750" data-total-price="750" data-count="1")
+                        td.order__basket-cart-td
+                          .order__basket__img-content.row.row--ai-c
+                            .order__basket__img-wrap
+                              img.order__basket__img(src="%=static=%img/content/carts-good-basket-img.jpg")
+                            h2.order__basket-headline-good.text.text--fw600.text--uppercase Осетинский пирог с капустой, яйцом и жареным луком
+                        td.order__basket-cart-td
+                          .row.row--jc-c
+                            p.order__basket-good-price.text.text--fw600 750 
+                            span.order__basket-good-price-span.text--fw600.m--t-a руб.
+                        td.order__basket-cart-td
+                          .row.row--jc-c
+                            p.order__basket-good-price.order__basket-good-price--total.text.text--fw600 750 
+                            span.order__basket-good-price-span.text--fw600.m--t-a руб.
+                        td.order__basket-cart-td.order__basket-cart-td--last
+                          button.order__basket-cart-cancel.button(type="button")
+                          .row.row--jc-c
+                            .order__basket-controls.row
+                              button.order__basket-control.order__basket-control--inc.button(type="button")
+                              p.order__basket-control-number.text.text--fw600 1
+                              button.order__basket-control.order__basket-control--dec.button(type="button")
+                          p.order__basket-good-pieces.text.text--fw300.text--center шт.
+                .row.row--jc-fe.m--b5
+                  .order__total-price.row
+                    h2.order__total-price.text.text--fw600 Товаров на:
+                    .order__total-price-description.row
+                      p.order__total-price-num.text.text--fw600 12 750
+                      span.order__total-price-span.text--fw600.m--t-a руб.
+                form.order__form(action="action.php" method="post")
+                  h2.carts__good-description-headline.carts__good-description-headline--order.text.text--fw600 Заполните данные о заказе:
+                  .order__form-content-wrap
+                    .order__form-content-user.row.row--ai-c
+                      .order__form-content-user-icon
+                        img.order__form-content-user-icon-img(src="%=static=%img/content/user.svg")
+                      p.order__form-content-user-name.text.text--fw600 Покупатель
+                    ul.order__form-list.list
+                      li.order__form-items
+                        label.order__form-item-label.text--fw300.d-block(for="orderUserName") Имя
+                        input.order__form-item-input.input.text--fw300(type="text" name="userName")#orderUserName
+                      li.order__form-items
+                        label.order__form-item-label.text--fw300.d-block(for="orderUserTel") Телефон
+                        input.order__form-item-input.input.text--fw300(type="tel" name="userTel")#orderUserTel
+                      li.order__form-items
+                        label.order__form-item-label.text--fw300.d-block(for="orderUserAddress") Введите адрес доставки
+                        input.order__form-item-input.input.text--fw300(type="text" name="userAddress")#orderUserAddress
+                      li.order__form-items
+                        label.order__form-item-label.text--fw300.d-block(for="orderUserComment") Комментарий
+                        textarea.order__form-item-input.order__form-item-input--textarea.input.text--fw300(name="userCommentName")#orderUserComment
+                    ul.order__form-list-payment.list.row.row--ai-c
+                      li.order__form-payment-items
+                        h2.order__form-payment-headline.text.text--fw600 Способы оплаты:
+                      li.order__form-payment-items
+                        input.order__form-payment-input-radio.input.input--radio(type="radio" name="radioPayment" checked)#radioPaymentCash
+                        label.order__form-payment-label.text--fw300(for="radioPaymentCash") Наличными курьеру
+                          span.order__form-payment-label-indicator
+                      li.order__form-payment-items
+                        input.order__form-payment-input-radio.input.input--radio(type="radio" name="radioPayment")#radioPaymentCard
+                        label.order__form-payment-label.text--fw300.row.row--reverse.row--ai-c(for="radioPaymentCard") Банковская карта
+                          span.order__form-payment-label-indicator.d-block
+                          span.order__form-payment-label-icon.d-block
+                      li.order__form-payment-items.order__form-payment-items--total-price.row.row--ai-c
+                        h2.order__form-payment.text.text--fw600 К оплате:
+                        .row
+                          p.order__form-payment-total-price.text.text--fw600 12 750
+                          span.order__form-payment-total-price-span.text--fw600.m--t-a руб.
+                    .order__agreement
+                      input.order__agreement-input.input.input--checkbox(type="checkbox" checked)#agreement
+                      label.order__agreement-label.text--fw300.d-block(for="agreement") Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики обработки
+                        a.order__agreement-link(href="#") персональных данных
+                        span.order__agreement-label-indicator
+                    .row.row--jc-c
+                      button.order__submit-button.text--fw600.text--center(type="submit") Оформить заказ
+
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__row-top
+            .container.row.row--ai-c
+              .footer-content__row-top-logo-wrap
+                .page-header__items.page-header__items--mr10.row.row--ai-c
+                  .icons.icons--pie.icons--pie-footer
+                  h2.page-header__main-title.page-header__main-title--footer.text--uppercase Доставка осетинских пирогов в Москве
+              ul.main-nav.main-nav--footer.list.row.row--ai-c.grow
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С мясом
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С курицей
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С рыбой
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С сыром
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С капустой
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С картошкой
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") С грибами
+                li.list--items-mr-resize6
+                  a.main-nav__link.text--td-none(href="#") Сладкие
+          .footer-content__row-bottom
+            .container.row.m--b40.m--b40-media620-b0
+              .footer-content__description
+                .user-block.user-block--footer
+                  ul.user-block__tel.user-block__tel--footer.list
+                    li.user-block__tel-items.list--items-mb5
+                      a.user-block__tel-link.text--td-none(href="tel:84952009709") 8 (495) 200-97-09
+                    li.user-block__tel-items.list--items-mb5
+                      p.user-block__tel-text.text Звоните с 09:00 до 21:00
+                    li.user-block__tel-items.list--items-mb5
+                      p.user-block__tel-text.text Ежедневно ПН-ВС
+                ul.socials.list.row
+                  li.socials__items
+                    a.socials__link.socials__link--vk(href="#" aria-label="вконтакте")
+                  li.socials__items
+                    a.socials__link.socials__link--fb(href="#" aria-label="фейсбук")
+                  li.socials__items
+                    a.socials__link.socials__link--od(href="#" aria-label="одноклассники")
+                  li.socials__items
+                    a.socials__link.socials__link--g(href="#" aria-label="гугл плюс")
+                  li.socials__items
+                    a.socials__link.socials__link--tw(href="#" aria-label="твиттер")
+                  li.socials__items
+                    a.socials__link.socials__link--v(href="#" aria-label="вайбер")
+                  li.socials__items
+                    a.socials__link.socials__link--w(href="#" aria-label="ватсап")
+              .footer-content__lists-wrap.row.grow
+                ul.footer-content__list.list
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") О компании
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Условия доставки
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Условия оплаты
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Акции
+                  li.footer-content__lists-items
+                    a.footer-content__lists-link.text--td-none.text--fw300(href="#") Контакты
+                - for (let i = 0; i < 3; i++)
+                  ul.footer-content__list.list
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с мясом
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с курицей
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с индейкой
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с мясом
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с курицей
+                    li.footer-content__lists-items
+                      a.footer-content__lists-link.text--td-none.text--fw300(href="#") Осетинские пироги с индейкой
+            .footer-content__icon-wrap.container.row.row--jc-fe.m--b15
+              span.footer-content__icon.d-block
+            .footer-content__copyright-wrap.container.row.row--jc-sb.row--ai-c
+              p.footer-content__copyright-text.text.text--fw300 © 2018 Доставка осетинских пирогов
+              a.footer-content__copyright-link.d-block.text--td-none(href="#") Создание и продвижение сайтов
+                
+              
+            
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='%=static=%js/separate-js/owl.carousel.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')
