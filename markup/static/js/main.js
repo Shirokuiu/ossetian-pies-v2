@@ -115,7 +115,7 @@
   document.addEventListener('scroll', function () {
     var pos = nav.getBoundingClientRect();
     var ph = pageHeader.getBoundingClientRect();
-    var docPosition = document.documentElement.scrollTop;
+    var docPosition = document.documentElement.scrollTop || document.body.scrollTop;
     
     if (pos.top <= 0) {
       nav.classList.add('main-nav--sticky');
@@ -340,7 +340,9 @@
     return result;
   }; 
   
-  range.addEventListener('input', function () {
-    this.style.backgroundImage = '-webkit-linear-gradient(right, #fc471e 0%, #fc471e ' + setRange(this) + '%, #eaeaea ' + setRange(this) + '%, #eaeaea 100%)';
-  });
+  if (range !== null) {
+    range.addEventListener('input', function () {
+      this.style.backgroundImage = '-webkit-linear-gradient(right, #fc471e 0%, #fc471e ' + setRange(this) + '%, #eaeaea ' + setRange(this) + '%, #eaeaea 100%)';
+    });
+  }
 })();

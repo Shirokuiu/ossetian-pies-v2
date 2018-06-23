@@ -117,7 +117,8 @@
     .carts__good-control-button-wrap
       width 150px
     .carts__good-control-button
-      height 100%
+      margin-top auto
+      margin-bottom auto
     .carts__good-control-number
       font-size 24px
       line-height 48px
@@ -144,10 +145,26 @@
   transition 0.2s ease
   
 .carts__good-img-wrap
+  position relative
+  
   margin-bottom 5px
   padding-top 5px
   padding-left 5px
   padding-right 5px
+  
+.carts__good-hit
+  position absolute
+  
+  top 12px
+  left 15px
+  
+  padding 5px 10px
+  
+  font-size 13px
+  line-height 15px
+  color #ffffff
+  
+  background-color #63ab23
   
 .carts__good-headline
   margin-bottom 10px
@@ -243,13 +260,13 @@
 .carts__good-control-button
   reset-button()
   
-  display flex
-  justify-content center
-  align-items center
+  position relative
+  
   height 35px
   span
-    position relative
+    center-absolute()
     
+    display block
     width 33%
     height 25px
     &::before,
@@ -305,6 +322,9 @@
     padding-bottom 0
     
     border-bottom none
+  .carts__good-control-button
+    span
+      width 20%
   
 .carts__hit
   box-sizing border-box
@@ -547,9 +567,6 @@
       width auto
       
 @media(max-width 768px)
-  .carts
-    margin-bottom 15px
-  
   .carts__good
     &--index
       width auto
@@ -571,13 +588,21 @@
   .carts__wrap
     &:nth-child(1)
       flex-direction column
-    &:nth-child(2)
-      display none
       margin-bottom 0
+    &:nth-child(2)
+      flex-direction column
+      margin-bottom 0
+      
+  .carts__good-hit
+    padding 15px 30px
+    
+    font-size 21px
+    line-height 24px
       
   .carts__wrap-content
     &--last
-      display none
+      flex-direction column
+      margin-bottom 0
       
   .carts__title-nav-list
     display none
@@ -625,6 +650,12 @@
     line-height 24px
     
 @media(max-width 440px)
+  .carts
+    margin-bottom 15px
+    &--basket
+      margin-bottom 10px
+      padding-top 10px
+  
   .carts__good
     &--inner
       box-sizing border-box
@@ -654,6 +685,12 @@
       .carts__good-buy
         padding 10px 0
         
+  .carts__good-hit
+    padding 5px 10px
+
+    font-size 13px
+    line-height 15px
+    
   .carts__good-description-row-top
     padding 0 15px
     
@@ -684,3 +721,8 @@
   .carts__good-inner-composition-items
     font-size 15px
     line-height 18px
+    
+@media(max-width 350px)
+  .carts__good-inner-composition-items
+    font-size 12px
+    line-height 15px

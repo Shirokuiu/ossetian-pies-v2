@@ -139,7 +139,7 @@ html(class="no-js", lang="ru")
             .page-content__description.grow
               section.carts.carts--inner
                 .carts__good-description-row-top
-                  h2.carts__good-description-headline.text.text--fw600 Пирог с мясом «Фыджын»
+                  h1.carts__good-description-headline.text.text--fw600 Пирог с мясом «Фыджын»
                   ul.breadcrumbs.breadcrumbs--cart-inner.list.row
                     li.breadcrumbs__items
                       a.breadcrumbs__link.text--fw300.text--td-none(href="index.html") Главная
@@ -913,16 +913,16 @@ html(class="no-js", lang="ru")
                       
             aside.filter(action="action.php" method="post")
               .filter__content.filter__content--inner
-                h2.filter__headline.text.text--fw600 Фильтр по параметрам:
+                .filter__headline.text--fw600 Фильтр по параметрам:
                 .filter__content-range-controls
-                  h3.filter__headline.filter__headline--no-border.text.text--fw600 Вес пирога (грамм)
+                  .filter__headline.filter__headline--no-border.text.text--fw600 Вес пирога (грамм)
                   .filter__range-wrap
                     ul.filter__range-list.row.row--jc-sb.list
                       li.filter__range-items.text--fw300 800
                       li.filter__range-items.text--fw300 1000
                       li.filter__range-items.text--fw300 1200
                       li.filter__range-items.text--fw300 1400
-                    input.filter__range(type="range" min="0" max="100" value="30")
+                    input.filter__range(type="range" min="0" max="100" step="30" value="30")
                 h3.filter__headline.filter__headline--no-border.text.text--fw600 Начинка
                 ul.filter__checkbox-list.list
                   li.filter__checkbox-items

@@ -327,6 +327,17 @@
       padding 25px 15px
       
 @media(max-width 768px)
+  .main-nav
+    .main-nav__items
+      &--basket
+        min-width 50%
+    &--sticky
+      .main-nav__items
+        &--basket
+          position static
+          
+          min-width 50%
+  
   .main-nav__items
     &:nth-child(2)
       flex-grow 1
@@ -367,7 +378,7 @@
       &:last-child
         margin-bottom 0
         
-@media(max-width 380px)
+@media(max-width 420px)
   .main-nav__headline
     font-size 0
     
